@@ -3,7 +3,9 @@
 Hello Blazor fans, it's time for another episode of the Blazor Power Hour. Each week we take an hour to discuss a Blazor topic, FAQ, or common misconception.
 
 **When:** 10AM ET
+
 **Where:** [CodeItLive](https://twitch.tv/codeitlive)
+
 **How:** You can participate via chat in Twitch and ask questions live. You can also file an issue on this GitHub repo to have it covered as a show topic.
 
 **Past Shows:** Past shows can be found on Twitch TV for 2 weeks, they will then archive on the [Telerik YouTube channel](https://youtube.com/telerik). Source code for past shows can be found below.
