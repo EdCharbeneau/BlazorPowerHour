@@ -56,4 +56,8 @@ Details and Code: https://github.com/EdCharbeneau/BlazorPowerHour/issues/2
 
 Video: https://www.youtube.com/watch?v=fGYVRuga7LY&list=PLvmaC-XMqeBajjXk2Z1PWJq30Ompat0kE&index=1
 
+## EP 7
+### Blazor File Uploads
 
+Video: TBD
+Code: TBD

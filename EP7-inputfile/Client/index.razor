@@ -1,0 +1,62 @@
+@page "/"
+@using System.IO
+@inject HttpClient Http
+
+<InputFile OnChange="LoadImage" />
+
+@if (imageDataUri is not null)
+{
+    <hr>
+    <label>Client-Side</label>
+    <img src="@imageDataUri" />
+    <hr>
+}
+
+@if (imageServerUri is not null)
+{
+    <label>Server-Side</label>
+    <img src="@imageServerUri" />
+    <br>
+}
+
+@code {
+    string imageDataUri;
+    string imageServerUri;
+
+    async Task LoadImage(InputFileChangeEventArgs e)
+    {
+
+        long maxFileSize = 1024 * 1024 * 15;
+
+        // On Client e.File is a IBrowserFile
+        // Read Data
+        var imageFile = await e.File.RequestImageFileAsync("image/jpeg", maxWith: 640, maxHeight: 480);
+        using Stream fileStream = imageFile.OpenReadStream(maxFileSize);
+        using MemoryStream ms = new();
+
+        await fileStream.CopyToAsync(ms);
+        byte[] fileBytes = ms.ToArray();
+
+        // Display Data as data:uri
+        imageDataUri = $"data:image/jpeg;base64,{Convert.ToBase64String(fileBytes)}";
+
+        // On server 'file' binds to IFormFile
+        // Post to server
+        using var content = new MultipartFormDataContent();
+        content.Add(
+            content: new ByteArrayContent(fileBytes),
+            name: "\"file\"", // name must match the endpoint's parameter name
+            fileName: e.File.Name
+            );
+
+        var response = await Http.PostAsync("/Filesave", content);
+
+        // Was the post a success?
+        response.EnsureSuccessStatusCode();
+
+        // Where was the resource saved?
+        imageServerUri = response.Headers.Location.ToString();
+
+    }
+
+}
