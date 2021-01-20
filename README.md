@@ -60,4 +60,4 @@ Video: https://www.youtube.com/watch?v=fGYVRuga7LY&list=PLvmaC-XMqeBajjXk2Z1PWJq
 ### Blazor File Uploads
 
 Video: TBD
-Code: TBD
+Code: [Files](https://github.com/EdCharbeneau/BlazorPowerHour/tree/main/EP7-inputfile)
