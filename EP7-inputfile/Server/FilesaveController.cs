@@ -17,7 +17,7 @@ namespace {project}.Server.Controllers
         public FilesaveController(IWebHostEnvironment env) => this.env = env;
 
         [HttpPost]
-        public async Task<IActionResult> PostFile([FromForm] IFormFile file)
+        public async Task<IActionResult> PostFile(IFormFile file)
         {
             /* Note:
                 This demo shows how to save a file to the wwwroot folder.
