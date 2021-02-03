@@ -61,3 +61,14 @@ Video: https://www.youtube.com/watch?v=fGYVRuga7LY&list=PLvmaC-XMqeBajjXk2Z1PWJq
 
 Video: TBD
 Code: [Files](https://github.com/EdCharbeneau/BlazorPowerHour/tree/main/EP7-inputfile)
+
+## EP 8
+### Blazor FAQ Show 1
+
+- 1. How do I escape the (at) symbol in Razor?
+- 2. How do I create a color picker in Blazor?
+- 3. How do I bind a CSS class?
+- 4. How do I hide a password in a Blazor input?
+- 5. How do render Raw HTML in Blazor?
+
+Answers and Examples: https://blazorrepl.com/repl/QPacaxlA09xjamI147
