@@ -72,3 +72,9 @@ Code: [Files](https://github.com/EdCharbeneau/BlazorPowerHour/tree/main/EP7-inpu
 - 5. How do render Raw HTML in Blazor?
 
 Answers and Examples: https://blazorrepl.com/repl/QPacaxlA09xjamI147
+
+## EP 9
+### Blazor Layout Components
+
+Q: I'm a XAML Forms developer, where are Grid and StackPanel in Blazor?
+A: https://edcharbeneau.com/blazor-layout-components/
