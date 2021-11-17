@@ -78,3 +78,11 @@ Answers and Examples: https://blazorrepl.com/repl/QPacaxlA09xjamI147
 
 Q: I'm a XAML Forms developer, where are Grid and StackPanel in Blazor?
 A: https://edcharbeneau.com/blazor-layout-components/
+
+## EP11-17-2020
+### HeadContent and Theme Swapping
+
+Detecting the users theme preferences in Blazor. On this episode we explore CSS and Blazor techniques that can be combined to detect the users light and dark theme preferences. Using these ideas we’ll implement a theme switcher.
+
+Q: How can I auto detect the user's theme and toggle dark mode.
+A: https://github.com/EdCharbeneau/BlazorPowerHour/tree/main/EP11-17-ThemeSwap
