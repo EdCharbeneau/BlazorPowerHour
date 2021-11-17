@@ -1,0 +1,40 @@
+﻿@inherits LayoutComponentBase
+@using BlazorPro.BlazorSize
+
+<HeadContent>
+    @if (isDark && isAutoTheme)
+    {
+        <link href="css/bootstrap/darkly.min.css" rel="stylesheet" />
+    } else
+    {
+        <link href="css/bootstrap/flatly.min.css" rel="stylesheet" />
+    }
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="HeadContentSample.styles.css" rel="stylesheet" />
+</HeadContent>
+
+<MediaQueryList>
+    <MediaQuery Media="(prefers-color-scheme: dark)" @bind-Matches="isDark" />
+    <h1>Is Contrast @isContrast</h1>
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+
+        <main>
+            <div class="top-row px-4">
+               <label for="theme-auto">Auto Detect Theme</label><input type="checkbox" @bind-value="isAutoTheme" />
+            </div>
+
+            <article class="content px-4">
+                @Body
+            </article>
+        </main>
+    </div>
+</MediaQueryList>
+
+@code {
+    bool isDark;
+    bool isAutoTheme;
+    bool isContrast;
+}
